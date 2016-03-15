@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Steam Review filter
 // @namespace    https://github.com/somoso/steam_user_review_filter/raw/master/steam_user_review_filter.user.js
-// @version      0.3
+// @version      0.31
 // @description  try to filter out the crap on steam
 // @author       You
 // @match        http://store.steampowered.com/app/*
