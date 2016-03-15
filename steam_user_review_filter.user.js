@@ -3,15 +3,13 @@
 // @namespace    https://raw.githubusercontent.com/somoso/steam_user_review_filter/master/steam_user_review_filter.js
 // @version      0.2
 // @description  try to filter out the crap on steam
-// @author       You
+// @author       somoso
 // @match        http://store.steampowered.com/app/*
 // @grant        none
 // @require http://code.jquery.com/jquery-latest.js
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
-
-// Your code here...
 
 //var searchStr = "#app_reviews_hash";
 var searchStr = ".review_box";
