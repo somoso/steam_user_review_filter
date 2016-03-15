@@ -21,12 +21,22 @@ for (i = 0; i < reviews.length; i++) {
     if ($(reviews[i]).hasClass('partial')) {
         continue;
     }
+    var filterReview = false;
+    
     var urgh = reviews[i].innerText;
     if (urgh.includes('10/10')) {
-        $(reviews[i]).remove();
+        filterReview = true;
     } else if (urgh.match(/\bign\b/i)) {
+        filterReview = true;
+    } else if (urgh.match(/\bbest ([A-Za-z0-9_-]+ ){1,3}ever( made)?\b/i)) {
+        filterReview = true;
+    }
+    
+    if (filterReview) {
         $(reviews[i]).remove();
-    } 
+    }
+
+  })
   
 }
 
