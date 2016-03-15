@@ -35,9 +35,6 @@ for (i = 0; i < reviews.length; i++) {
     if (filterReview) {
         $(reviews[i]).remove();
     }
-
-  })
-  
 }
 
 console.log("Ending steam user review filter");
