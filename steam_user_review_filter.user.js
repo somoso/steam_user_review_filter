@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Steam Review filter
 // @namespace    https://raw.githubusercontent.com/somoso/steam_user_review_filter/master/steam_user_review_filter.js
-// @version      0.2
+// @version      0.3
 // @description  try to filter out the crap on steam
-// @author       somoso
+// @author       You
 // @match        http://store.steampowered.com/app/*
 // @grant        none
 // @require http://code.jquery.com/jquery-latest.js
@@ -11,24 +11,23 @@
 /* jshint -W097 */
 'use strict';
 
-//var searchStr = "#app_reviews_hash";
 var searchStr = ".review_box";
 
-console.log("Starting this code");
+console.log("Starting steam user review filter");
 
-var arr = $(searchStr).find(".content");
+var reviews = $(searchStr);
 
-console.log(arr);
-
-for (i = 0; i < arr.length; i++) {
-    
-    var urgh = arr[i].innerText;
+for (i = 0; i < reviews.length; i++) {
+    if ($(reviews[i]).hasClass('partial')) {
+        continue;
+    }
+    var urgh = reviews[i].innerText;
     if (urgh.includes('10/10')) {
-        $(arr[i]).remove();
+        $(reviews[i]).remove();
     } else if (urgh.match(/ign/i)) {
-        $(arr[i]).remove();
+        $(reviews[i]).remove();
     } 
   
 }
 
-console.log("Ending this code");
+console.log("Ending steam user review filter");
