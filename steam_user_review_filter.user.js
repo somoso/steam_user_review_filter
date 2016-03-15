@@ -24,7 +24,7 @@ for (i = 0; i < reviews.length; i++) {
     var urgh = reviews[i].innerText;
     if (urgh.includes('10/10')) {
         $(reviews[i]).remove();
-    } else if (urgh.match(/ign/i)) {
+    } else if (urgh.match(/\bign\b/i)) {
         $(reviews[i]).remove();
     } 
   
