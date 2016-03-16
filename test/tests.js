@@ -2,8 +2,28 @@ QUnit.test( "hello test", function( assert ) {
   assert.ok( 1 == "1", "Passed!" );
 });
 
-QUnit.test( "rating_match_1", function( assert ) {
+QUnit.test( "would_x_again_match_1", function( assert ) {
   assert.ok( filter_steam("10/10 would play again") == true, "Passed!" );
+});
+
+QUnit.test( "would_x_again_match_2", function( assert ) {
+  assert.ok( filter_steam("WOULD HATE AGAIN AND AGAIN") == true, "Passed!" );
+});
+
+QUnit.test( "would_x_again_match_3", function( assert ) {
+  assert.ok( filter_steam("would listen to Macklemore again") == true, "Passed!" );
+});
+
+QUnit.test( "would_not_x_again_match_1", function( assert ) {
+  assert.ok( filter_steam("would not play again") == true, "Passed!" );
+});
+
+QUnit.test( "wouldnt_x_again_match_1", function( assert ) {
+  assert.ok( filter_steam("wouldn't meme again") == true, "Passed!" );
+});
+
+QUnit.test( "wouldnt_x_again_match_2", function( assert ) {
+  assert.ok( filter_steam("wouldnt meme again") == true, "Passed!" );
 });
 
 QUnit.test( "ign_match_1", function( assert ) {

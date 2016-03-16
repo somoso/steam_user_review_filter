@@ -14,7 +14,7 @@ if (!String.prototype.includes) {
 }
 
 function filter_steam(content) {
-    if (content.includes('10/10')) {
+    if (content.match(/\bwould([n't|nt])* ([A-Za-z0-9_-]+ ){1,3}again\b/i)) {
         return true;
     } else if (content.match(/\bign\b/i)) {
         return true;
