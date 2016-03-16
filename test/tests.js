@@ -49,3 +49,11 @@ QUnit.test( "best_ever_match_2", function( assert ) {
 QUnit.test( "best_ever_no_match_1", function( assert ) {
   assert.ok( filter_steam("Best Macklemore game. Not ever") == false, "Passed!" );
 });
+
+QUnit.test( "simuator_xxyy_match_1", function( assert ) {
+  assert.ok( filter_steam("crash simulator 2015") == true, "Passed!" );
+});
+
+QUnit.test( "simuator_xxyy_match_2", function( assert ) {
+  assert.ok( filter_steam("noscope simulator 2999") == true, "Passed!" );
+});
