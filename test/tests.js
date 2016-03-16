@@ -57,3 +57,7 @@ QUnit.test( "simuator_xxyy_match_1", function( assert ) {
 QUnit.test( "simuator_xxyy_match_2", function( assert ) {
   assert.ok( filter_steam("noscope simulator 2999") == true, "Passed!" );
 });
+
+QUnit.test( "simuator_xxyy_match_2", function( assert ) {
+  assert.ok( filter_steam("Surgeon Simulator 2013 is a good game") == false, "Passed!" );
+});
